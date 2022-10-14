@@ -56,11 +56,11 @@
                 <h2>Content Types</h2>
                 <ul class="contentFields" data-bind="foreach: contentsTypes" id="ContentFields">
                     <li>
-                        <div draggable="true" class="content-field ui-draggable contentField-TextOnly">Text Only</div>
+                        <div draggable="true" data-draggable class="text content-field ui-draggable contentField-TextOnly">Text Only</div>
                     </li>
 
                     <li>
-                        <div draggable="true" class="content-field ui-draggable contentField-ImageOnly">Image Only</div>
+                        <div draggable="true" data-draggable class="image content-field ui-draggable contentField-ImageOnly">Image Only</div>
                     </li>
 
                     <li>
@@ -92,6 +92,27 @@
                     </li>
                 </ul>
             </section>
+        </div>
+        <div class="hover-scroll" style="height: 583px; min-height: 200px; overflow-y: auto;">
+            <div class="content" style="height: 100%;">
+                <div style="background: #fff; margin: 0px; height: 100%;">
+                    <center>
+                        <table id="tblContainer" style="width: 100%;height: 100%;background:rgb(141, 67, 67)">
+                            <tr>
+                                <td>
+                                    <p>test</p>
+                                </td>
+                                <td>
+                                    <p>test</p>
+                                </td>
+                                <td>
+                                    <p>test</p>
+                                </td>
+                            </tr>
+                        </table>
+                    </center>
+                </div>
+            </div>
         </div>
     </div>
     <script src="drop.js"></script>
