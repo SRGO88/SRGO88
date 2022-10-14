@@ -1,0 +1,11 @@
+ /* Style the footer */
+ .footer {
+    background-color: #005eb8;
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+
+    /* position: absolute;
+    bottom: 0;
+    left: 0; */
+  }

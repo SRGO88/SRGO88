@@ -1,0 +1,108 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+    /* text-transform: capitalize; */
+    text-decoration: none;
+}
+
+h2{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: large;
+}
+
+body {
+    min-height: 100vh;
+    background-color: transparent;
+    /* background-color: aliceblue; */
+    background-size: cover;
+    background-position: center;
+}
+
+label{
+  font-size: medium;
+  font-family: Arial, Helvetica, sans-serif;
+  padding-top: 20px;
+}
+
+
+
+  .row {
+    margin: 0;
+    padding-top: 80px;
+  }
+  .text{}
+  .image{}
+
+  /* Create three unequal columns that floats next to each other */
+  .column {
+    float: left;
+    padding: 10px;
+  }
+  
+    .drag-container {
+        height: 100%;
+        overflow: auto;
+        width: 150px;
+        
+        padding: 15px;
+    }
+    .drag-item {
+        background-color: #fff;
+        border-radius: 2px;
+        box-shadow: 0 1px 2px 0 rgba(0, 0, 0, .05);
+        text-align:center;
+        margin-bottom: 10px;
+        padding: 10px;
+    }
+    .dropzone {
+        background-color: #fff;
+        border: 1px solid #ddd;
+        height: 100vh;
+        border-radius: 4px;
+        box-shadow: 0 1px 1px rgba(0,0,0,.05);
+        margin-bottom: 20px;
+        padding: 20px;
+        transition: background-color 0.25s ease-in;
+        align-items: center;
+    }
+    .drag-item p {
+        text-align:center;
+      }
+
+/* Left column */  
+ .column.left {
+    width: 12%;
+   }
+  /* right column */
+  .column.side {
+    width: 25%;
+    margin: 0;
+    border: 0;
+  }
+  /* Middle column */
+  .column.middle {
+    width: 58%;
+    overflow-y: auto;
+    overflow-x: auto;
+    position: relative;
+    z-index: 2;
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+
+
+  /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 600px) {
+    .column.left, .column.side, .column.middle {
+      width: 100%;
+    }
+  }
+  
