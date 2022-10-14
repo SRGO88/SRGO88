@@ -1,162 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<title>Rich Text Drag Drop</title>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-<link rel="stylesheet" href="header.css" />
-<link rel="stylesheet" href="style.css" />
-<link rel="stylesheet" href="footer.css" />
+    <title>Rich Text Drag Drop</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
-
-<div class="header">
-    <img class="logo" src ="download_nhs1.png" alt="logo" width="80px" height="50px"/>
-
-    <nav class="navbar">
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">about</a></li>
-            <li><a href="#">support</a></li>
-            <li><a href="#">Login</a></li>
-        </ul>
-    </nav>
-</div>
-
-<div class="row">
-  <div class="column left">
-    <h2 style="text-align: center;">Drop Menus</h2>
-    <div class="drag-container" id="draggable">
-        <div class="text drag-item" data-draggable   id="text" draggable="true" >
-            <p>
-                <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-viewBox="0 0 379.254 379.254" style="enable-background:new 0 0 379.254 379.254;" xml:space="preserve" width="30" height="30">
-<g>
-<path d="M371.582,310.87V68.384c4.592-2.778,7.672-7.805,7.672-13.564c0-8.759-7.101-15.86-15.86-15.86
-c-6.046,0-11.299,3.384-13.975,8.36H29.834c-2.676-4.976-7.929-8.36-13.974-8.36C7.101,38.96,0,46.061,0,54.82
-c0,6.318,3.703,11.756,9.049,14.306v241.002C3.703,312.678,0,318.116,0,324.434c0,8.759,7.101,15.86,15.86,15.86
-c6.317,0,11.756-3.704,14.306-9.05h318.919c2.551,5.346,7.989,9.05,14.308,9.05c8.76,0,15.86-7.101,15.86-15.86
-C379.254,318.675,376.174,313.648,371.582,310.87z M349.83,316.244H29.423c-1.331-2.198-3.175-4.043-5.374-5.373V68.383
-c2.428-1.469,4.437-3.557,5.785-6.063h319.585c1.595,2.966,4.113,5.352,7.163,6.806v241.002
-C353.775,311.467,351.431,313.6,349.83,316.244z"/>
-<path d="M61.025,114.702c4.142,0,7.5-3.358,7.5-7.5v-4.05h19.65v80.499h-1.233c-4.142,0-7.5,3.358-7.5,7.5
-c0,4.142,3.358,7.5,7.5,7.5h17.466c4.142,0,7.5-3.358,7.5-7.5c0-4.142-3.358-7.5-7.5-7.5h-1.233v-80.499h19.65v4.05
-c0,4.142,3.358,7.5,7.5,7.5c4.142,0,7.5-3.358,7.5-7.5v-11.55c0-4.142-3.358-7.5-7.5-7.5h-69.3c-4.142,0-7.5,3.358-7.5,7.5v11.55
-C53.525,111.344,56.883,114.702,61.025,114.702z"/>
-<path d="M163.255,193.448c-4.142,0-7.5,3.358-7.5,7.5c0,4.142,3.358,7.5,7.5,7.5h21.024c4.142,0,7.5-3.358,7.5-7.5
-c0-4.142-3.358-7.5-7.5-7.5h-3.013V92.66h3.013c4.142,0,7.5-3.358,7.5-7.5c0-4.142-3.358-7.5-7.5-7.5h-21.024
-c-4.142,0-7.5,3.358-7.5,7.5c0,4.142,3.358,7.5,7.5,7.5h3.012v100.789H163.255z"/>
-<path d="M315.814,112.482h-87.572c-4.143,0-7.5,3.358-7.5,7.5c0,4.142,3.357,7.5,7.5,7.5h87.572c4.143,0,7.5-3.358,7.5-7.5
-C323.314,115.84,319.956,112.482,315.814,112.482z"/>
-<path d="M315.814,151.097h-87.572c-4.143,0-7.5,3.358-7.5,7.5s3.357,7.5,7.5,7.5h87.572c4.143,0,7.5-3.358,7.5-7.5
-S319.956,151.097,315.814,151.097z"/>
-<path d="M315.814,235.222H61.025c-4.142,0-7.5,3.358-7.5,7.5c0,4.142,3.358,7.5,7.5,7.5h254.788c4.143,0,7.5-3.358,7.5-7.5
-C323.314,238.58,319.956,235.222,315.814,235.222z"/>
-<path d="M315.814,273.837H61.025c-4.142,0-7.5,3.358-7.5,7.5c0,4.142,3.358,7.5,7.5,7.5h254.788c4.143,0,7.5-3.358,7.5-7.5
-C323.314,277.195,319.956,273.837,315.814,273.837z"/>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-</svg>
-            </p>
+    <div class="templateEditorWrapper styled-scroll">
+        <div class="editorTopBar">
+            <ul class="controllButtons fRight">
+                <li>
+                    <button data-selectbutton class="active">Layouts</button>
+                </li>
+                <li>
+                    <button data-selectbutton class="">Content</button>
+                </li>
+            </ul>
         </div>
-        <div class="image drag-item" data-draggable  id="image" draggable="true" >
-            <!-- <img src = "textboxsvg.svg" alt="" width="30" height="30"/> -->
-            <p><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="30" height="30"><path fill="none" d="M0 0h24v24H0z"/>
-                <path d="M4.828 21l-.02.02-.021-.02H2.992A.993.993 0 0 1 2 20.007V3.993A1 1 0 0 1 2.992 3h18.016c.548 0 .992.445.992.993v16.014a1 1 0 0 1-.992.993H4.828zM20 15V5H4v14L14 9l6 6zm0 2.828l-6-6L6.828 19H20v-1.172zM8 11a2 2 0 1 1 0-4 2 2 0 0 1 0 4z"/></svg> 
-            </p>
+        <!--/editorTopBar -->
+        <div class="optionsCol hover-scroll" style="height: 551px; min-height: 200px; overflow-y: auto;">
+            <section data-Layouts class="">
+                <h2>Layouts</h2>
+                <ul class="layoutFields" id="LayoutFields">
+                    <li class="active" draggable="true">
+                        <figure>
+                            <img src="/Content/Images/t.gif" class="noColumns">
+                            <div>Use Layout</div>
+                        </figure>s
+                        <h4 data-bind="text: title">No Columns</h4>
+                        <cite data-bind="text: cite">Preheader, Header, body, Footer</cite>
+                    </li>
+                    <li class="" draggable="true">
+                        <figure>
+                            <img src="/Content/Images/t.gif" class="twoColumns">
+                            <div>Use Layout</div>
+                        </figure>
+                        <h4 data-bind="text: title">2 Columns</h4>
+                        <cite data-bind="text: cite">Preheader, Header, 2 Columns, Footer</cite>
+                    </li>
+                    <li class="" draggable="true">
+                        <figure>
+                            <img src="/Content/Images/t.gif" class="threeColumns">
+                            <div>Use Layout</div>
+                        </figure>
+                        <h4 data-bind="text: title">3 Columns</h4>
+                        <cite data-bind="text: cite">Preheader, Header, 3 Columns, Footer</cite>
+                    </li>
+                </ul>
+            </section>
+            <section data-Content class="hidden">
+                <h2>Content Types</h2>
+                <ul class="contentFields" data-bind="foreach: contentsTypes" id="ContentFields">
+                    <li>
+                        <div draggable="true" class="content-field ui-draggable contentField-TextOnly">Text Only</div>
+                    </li>
+
+                    <li>
+                        <div draggable="true" class="content-field ui-draggable contentField-ImageOnly">Image Only</div>
+                    </li>
+
+                    <li>
+                        <div draggable="true" class="content-field ui-draggable contentField-ImageOnTop">Image on top</div>
+                    </li>
+
+                    <li>
+                        <div draggable="true" class="content-field ui-draggable contentField-ImageOnBottom">Image on bottom</div>
+                    </li>
+
+                    <li>
+                        <div draggable="true" class="content-field ui-draggable contentField-ImageOnLeft">Image on left</div>
+                    </li>
+
+                    <li>
+                        <div draggable="true" class="content-field ui-draggable contentField-ImageOnRight">Image on right</div>
+                    </li>
+
+                    <li>
+                        <div draggable="true" class="content-field ui-draggable contentField-Divider">Divider</div>
+                    </li>
+
+                    <li>
+                        <div draggable="true" class="content-field ui-draggable contentField-Social">Social Sharing</div>
+                    </li>
+
+                    <li>
+                        <div draggable="true" class="content-field ui-draggable contentField-SocialLinks">Social Links</div>
+                    </li>
+                </ul>
+            </section>
         </div>
     </div>
-
-  </div>
-  
-  <div class="column middle" style="float: left;">
-    <h2>Add your Content!</h2>
-      <div id="templateEditor">
-          <div class="dropzone" data-dropzone id="dropzone">
-          Dear {name}
-          <br /><br />
-          Create personal, plain-text emails with all the formatting options of HTML—now with
-          the added flair of embedded text, image, signature..
-          <br /> <br />
-          <img  src="image_nature.jpg" alt="nature" width="400px" height="200px"/>
-          <br />
-          <br />
-        </div>
-     </div>
-</div>
-  
-  <div class="column side">
-    <h2 style="text-align: center; border-bottom: double;">Settings</h2>
-    <div id="imageSettings" style="display: none;">
-      <!-- style="display: none;" -->
-        <label>Image</label>
-          <div class="row" style="padding-top: 10px;">
-            <div class="column" >
-              <img  src="download_imageb.png" alt="image" width="80px" height="70px"/>
-            </div>
-            <div class="column">
-             <button class="btn btn-primary">Browse</button>
-            </div>
-          </div>
-          <div>
-            <label>Image Alignment</label>
-            <div class="btn-group" style="text-align: center;">
-              <button type="button" class="btn btn-success" style="padding-left: 50px;">left</button>
-              <button type="button" class="btn btn-success" style="padding-left: 50px;">center</button>
-              <button type="button" class="btn btn-success" style="padding-left: 50px;">right</button>
-            </div>
-          </div>
-          <div>
-            <label>Image Size Formatting</label>
-            <div>
-              <select name="subject" id="subject">
-                <option value="" selected="selected">Select width</option>
-              </select>
-            </div>
-          </div>
-  
-    </div>
-  </div>
-</div>
-
-  <div>
-    <button onclick="getTemplateCode()">Save</button>
-  </div>
-
-<div class="footer">
-    <p>Footer: &#169 NHS Terms and conditions
-        Privacy and cookies</p>
-  </div>
-  <script src="drop.js"></script>
+    <script src="drop.js"></script>
+    <script src="style.js"></script>
 </body>
+
 </html>
