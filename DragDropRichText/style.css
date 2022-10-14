@@ -12996,3 +12996,8 @@ close_btn_red.png .dropZone {
     color: rgb(51, 51, 51);
     text-align: left;
 }
+table,
+th,
+td {
+    border: 1px solid;
+}
