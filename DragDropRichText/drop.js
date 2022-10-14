@@ -2,6 +2,7 @@ function allowDrop(ev) {
     //disable browser default behaviour
     ev.preventDefault();
  }
+ //test
  
  function drag(ev) {
    console.log("drag start.");
