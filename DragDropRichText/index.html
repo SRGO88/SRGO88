@@ -23,7 +23,7 @@
         </div>
         <!--/editorTopBar -->
         <div class="optionsCol hover-scroll" style="height: 551px; min-height: 200px; overflow-y: auto;">
-            <section data-Layouts class="">
+            <section data-section_Layouts class="">
                 <h2>Layouts</h2>
                 <ul class="layoutFields" id="LayoutFields">
                     <li class="active" draggable="true">
@@ -52,7 +52,7 @@
                     </li>
                 </ul>
             </section>
-            <section data-Content class="hidden">
+            <section data-section_Content class="hidden">
                 <h2>Content Types</h2>
                 <ul class="contentFields" data-bind="foreach: contentsTypes" id="ContentFields">
                     <li>
@@ -91,6 +91,41 @@
                         <div draggable="true" class="content-field ui-draggable contentField-SocialLinks">Social Links</div>
                     </li>
                 </ul>
+            </section>
+            <section data-section_editImage data-Layouts class="hidden">
+                <h2>Edit Image Content</h2>
+                <label class="privilegesLabel" style="display: none;">You do not have privileges to edit this block </label>
+                <div class="blockTabArea">
+                    <section class="blockTabTemplate" style="width: 100%">
+                        <table style="margin-left: 14px; width: 93%;">
+                            <tr>
+                                <td style="background-color: #EBEEF5; text-align: center; padding-bottom: 20px; padding-top: 20px;">
+                                    <img src="/Content/Images/smallImageDefault.png" alt="">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>
+                                        <button class="sqrBut openFileUploadButton"> Select Image</button>
+                                    </p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Alignment:<br>
+                                    <section>
+                                        <button class="textAlign-left textAlign" value="left">L</button>
+
+                                        <button class="textAlign-center textAlign active" value="center">C</button>
+
+                                        <button class="textAlign-right textAlign" value="right">R</button>
+                                    </section>
+                                    <input type="checkbox" data-bind="checked: $parent.isEdgeToEdge">&nbsp;Edge To Edge<br>
+                                </td>
+                            </tr>
+                        </table>
+                    </section>
+                </div>
             </section>
         </div>
         <div class="hover-scroll" style="height: 583px; min-height: 200px; overflow-y: auto;">
