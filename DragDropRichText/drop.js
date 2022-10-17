@@ -41,9 +41,7 @@ function drop(ev) {
             imgEle.height = 150;
             imgEle.id = "img1";
             imgEle.src = "image_icon.jpg";
-            imgEle.addEventListener("click", function(e) {
-                hideOrShow();
-            })
+            imgEle.addEventListener("click", selectImage);
             ev.target.appendChild(imgEle);
             break;
 
@@ -78,9 +76,5 @@ function getTemplateCode() {
 
 
 function hideOrShow() {
-    var x = document.getElementById("imageSettings");
-    if (x.style.display === "none") {
-        x.style.display = "block";
-    }
 
 }
